@@ -11,11 +11,12 @@ public class formulario extends JFrame {
     private JButton enviarButton;
 
     public formulario(JFrame frame) {
+        super("Mi formulario");
         textField1.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 String cedula=String.copyValueOf(textField1.getText().toCharArray());
-
+                JOptionPane.getDesktopPaneForComponent(panelIngreso);
             }
         });
         textField2.addActionListener(new ActionListener() {
@@ -30,5 +31,8 @@ public class formulario extends JFrame {
 
             }
         });
+    }
+    public void showFormulario(){
+        setVisible(true);
     }
 }
